@@ -4,7 +4,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 
 
 
-public class Generic 
+public class Day 
 {
     private String time;
     private String course;
@@ -12,11 +12,11 @@ public class Generic
     public void Schedule()
     {
     try {
-        File myObj = new File("SrSeminar_RawData(2).csv");
+        File myObj = new File("SrSeminar_RawData (2).csv");
         Scanner myReader = new Scanner(myObj);
         while (myReader.hasNextLine()) {
           String data = myReader.nextLine();
-          System.out.println(data);
+          System.out.println(data + "\t");
         }
         myReader.close();
       } catch (FileNotFoundException e) {

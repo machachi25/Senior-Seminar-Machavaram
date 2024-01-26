@@ -1,7 +1,7 @@
 public class Taxi {
     public static void main(String[] args)
     {
-        Generic g1 = new Generic();
+        Day g1 = new Day();
         g1.Schedule();
     }
 }

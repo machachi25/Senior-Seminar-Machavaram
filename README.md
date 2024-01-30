@@ -16,3 +16,6 @@ I have added a bunhc of text files, that include all the things I consider essen
 
 Log entry #4(01/26/2024)
 I have started my work onto creating and printing out the toString for the student and their choices, as well as the presenters for each course. I edited my constructors, so that they will work better now, and that they can print sutff. But, I think I did a pretty good job today, staying a little more focused in class. 
+
+Log entry #5(01/29/2024)
+I have added a lot for readFile segments to my code, so that I can use them to make a toString method and create a line that shows the studetsn and their choices. Once, thsi part starts to work, then I can work on the optimization part of the project and make the schedule.

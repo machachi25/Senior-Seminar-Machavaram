@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class Senior
 {
-    private String nombrePrimero;
-    private String nombreSegundo;
+    //private String nombrePrimero;
+    //private String nombreSegundo;
+    private String nombre;
     private String firstChoice;
     private String secondChoice;
     private String thirdChoice;
@@ -16,9 +17,7 @@ public class Senior
     
     public Senior(String initNombre, String initFirst, String initSecond, String initThird, String initFourth, String initFifth)
     {
-      nombrePrimero = initNombre.substring(0, initNombre.indexOf( " "));
-      nombreSegundo = initNombre.substring(initNombre.indexOf( " ") + 1);
-      String nombre = nombrePrimero + nombreSegundo;
+      nombre = initNombre.substring(0, initNombre.indexOf( " ")) +  initNombre.substring(initNombre.indexOf( " ") + 1);
       firstChoice = initFirst;
       secondChoice = initSecond;
       thirdChoice = initThird;
@@ -33,7 +32,7 @@ public class Senior
       Scanner myReader = new Scanner(myObj);
       while (myReader.hasNextLine()) {
         String info = myReader.nextLine();
-
+      }
       myReader.close();
      } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
@@ -52,7 +51,7 @@ public class Senior
         System.out.println("An error occurred.");
         e.printStackTrace();
       }  
-    }
+    
 
     try {
       File myObj = new File("choices2.txt");
@@ -72,6 +71,7 @@ public class Senior
       Scanner myReader = new Scanner(myObj);
       while (myReader.hasNextLine()) {
       String tertiary = myReader.nextLine();
+      }
       myReader.close();
      } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
@@ -85,7 +85,7 @@ public class Senior
     Scanner myReader = new Scanner(myObj);
     while (myReader.hasNextLine()) {
       String quaternary = myReader.nextLine();
-
+    }
     myReader.close();
    } catch (FileNotFoundException e) {
     System.out.println("An error occurred.");
@@ -98,21 +98,23 @@ public class Senior
     Scanner myReader = new Scanner(myObj);
     while (myReader.hasNextLine()) {
       String quinary = myReader.nextLine();
-
+    }
     myReader.close();
    } catch (FileNotFoundException e) {
     System.out.println("An error occurred.");
     e.printStackTrace();
   }
-  }
-}
+  
 
-  public void setName(String initNombre)
+
+  public void setName(String initNombre) //
   {
-    nombre = 
+    nombre = initNombre;
   }
 
-}
+
+
+
 }
 }
 

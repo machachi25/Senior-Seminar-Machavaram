@@ -19,3 +19,6 @@ I have started my work onto creating and printing out the toString for the stude
 
 Log entry #5(01/29/2024)
 I have added a lot for readFile segments to my code, so that I can use them to make a toString method and create a line that shows the studetsn and their choices. Once, thsi part starts to work, then I can work on the optimization part of the project and make the schedule.
+
+Log entry #6(01/30/2024)
+I have made some changes to the plan, and with you help, I learned to parse certain aspects of the code, and now am going to select what I need from each colum of the raw data and apply it to all students. Then will use a toString to print out the selected data in a more legible way. 

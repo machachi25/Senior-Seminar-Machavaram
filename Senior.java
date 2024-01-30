@@ -7,30 +7,112 @@ public class Senior
 {
     private String nombrePrimero;
     private String nombreSegundo;
-    ArrayList<Senior> seniors = new ArrayList<Senior>();
+    private String firstChoice;
+    private String secondChoice;
+    private String thirdChoice;
+    private String fourthChoice;
+    private String fifthChoice;
+    ArrayList<Senior> seniorsChoices = new ArrayList<Senior>();
     
-    public Senior(String initNombre)
+    public Senior(String initNombre, String initFirst, String initSecond, String initThird, String initFourth, String initFifth)
     {
       nombrePrimero = initNombre.substring(0, initNombre.indexOf( " "));
       nombreSegundo = initNombre.substring(initNombre.indexOf( " ") + 1);
       String nombre = nombrePrimero + nombreSegundo;
-
+      firstChoice = initFirst;
+      secondChoice = initSecond;
+      thirdChoice = initThird;
+      fourthChoice = initFourth;
+      fifthChoice = initFifth;
     }
 
     public void Graduates()
     {
-        try {
+      try {
       File myObj = new File("Kids.txt");
       Scanner myReader = new Scanner(myObj);
       while (myReader.hasNextLine()) {
         String info = myReader.nextLine();
-        seniors.add(new Senior(info));
-      }
+
       myReader.close();
-    } catch (FileNotFoundException e) {
+     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
       e.printStackTrace();
     }
+
+    public void choices()
+    {
+      try {
+        File myObj = new File("choices.txt");
+        Scanner myReader = new Scanner(myObj);
+        while (myReader.hasNextLine()) {
+        String primary = myReader.nextLine();
+        myReader.close();
+       } catch (FileNotFoundException e) {
+        System.out.println("An error occurred.");
+        e.printStackTrace();
+      }  
     }
+
+    try {
+      File myObj = new File("choices2.txt");
+      Scanner myReader = new Scanner(myObj);
+      while (myReader.hasNextLine()) {
+      String secondary = myReader.nextLine();
+      myReader.close();
+     } catch (FileNotFoundException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+
+    }
+
+    try {
+      File myObj = new File("choices3.txt");
+      Scanner myReader = new Scanner(myObj);
+      while (myReader.hasNextLine()) {
+      String tertiary = myReader.nextLine();
+      myReader.close();
+     } catch (FileNotFoundException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+  
+  } 
+
+  try {
+    File myObj = new File("choices4.txt");
+    Scanner myReader = new Scanner(myObj);
+    while (myReader.hasNextLine()) {
+      String quaternary = myReader.nextLine();
+
+    myReader.close();
+   } catch (FileNotFoundException e) {
+    System.out.println("An error occurred.");
+    e.printStackTrace();
+  }
+  }
+
+  try {
+    File myObj = new File("choices5.txt");
+    Scanner myReader = new Scanner(myObj);
+    while (myReader.hasNextLine()) {
+      String quinary = myReader.nextLine();
+
+    myReader.close();
+   } catch (FileNotFoundException e) {
+    System.out.println("An error occurred.");
+    e.printStackTrace();
+  }
+  }
+}
+
+  public void setName(String initNombre)
+  {
+    nombre = 
+  }
+
+}
+}
 }
 

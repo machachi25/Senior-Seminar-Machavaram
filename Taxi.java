@@ -4,6 +4,8 @@ public class Taxi {
         Seminars s1 = new Seminars();
         //System.out.println("i");
         s1.splitter();
+        //System.out.println(s1.toString());
+        
 
 
 

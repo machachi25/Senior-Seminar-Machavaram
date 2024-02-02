@@ -22,3 +22,6 @@ I have added a lot for readFile segments to my code, so that I can use them to m
 
 Log entry #6(01/30/2024)
 I have made some changes to the plan, and with you help, I learned to parse certain aspects of the code, and now am going to select what I need from each colum of the raw data and apply it to all students. Then will use a toString to print out the selected data in a more legible way. 
+
+Log entry#7(02/01/2024)
+I have learned to parse and specifically select the aspects of the raw data I want, now I have to add my points system in some way, but I think I have an idea.

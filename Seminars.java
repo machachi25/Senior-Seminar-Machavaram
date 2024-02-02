@@ -6,6 +6,7 @@ import java.util.*;
 public class Seminars
 {
     String[][] stuChoices = new String[100][25];
+    ArrayList <Senior> roster = new ArrayList<>(); 
     int i = 0; //counter for rows 
     public void splitter()
     {
@@ -15,8 +16,10 @@ public class Seminars
             while (myReader.hasNextLine()) {
               String data = myReader.nextLine();
               stuChoices[i] =  data.split(",");
-              System.out.println(stuChoices[i][3] +  stuChoices[i][10] +  stuChoices[i][11] + stuChoices[i][12] +  stuChoices[i][13] +  stuChoices[i][14]);
+              System.out.println(stuChoices[i][2] + stuChoices[i][3] +stuChoices[i][10] +  " " +  stuChoices[i][11] + " " +  stuChoices[i][12] +  " " +  stuChoices[i][13] +  " " +  stuChoices[i][14]);
               //create student obj
+              Senior s1 = new Senior(stuChoices[i][2], stuChoices[i][3],  (stuChoices[i][10]), (stuChoices[i][11]), (stuChoices[i][12]),  (stuChoices[i][13]), (stuChoices[i][14]));
+              roster.add(s1);
                 
               i++;
             }
@@ -45,6 +48,14 @@ public class Seminars
 
       public void popularity()
       {
-        
+        int count = 0; 
+        for(Senior student:roster){
+          if(student.getFirstChoice() == 1)
+          {
+            System.out.println("Adventure");
+            count++;
+          }
+        }
+        System.out.println("Number of studetns wanting ADVENTURE AS THEIR FIRST CHOICE: " + count);
       }    
 }

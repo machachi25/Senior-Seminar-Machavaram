@@ -1,3 +1,5 @@
+
+
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.Scanner; // Import the Scanner class to read text files
@@ -48,7 +50,7 @@ public class Seminars
 
       public void popularity() //used to find the semianrs that are most requested
       {
-        int[] sessions = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}; //unused 1D array
+        int[] sessions = new int[20]; //unused 1D array
         int first = 5; // were supposed to be point values for the popularity, but i have to figure out how to use them
         int second = 4;
         int third = 3;
@@ -57,8 +59,8 @@ public class Seminars
         int count = 0; 
         
         // finds the total number of votes for each semianr ID as peoples first choice
-
-        for(int d = 1; d < 19; d++)//for the 18 different seminars
+        int lenRos = roster.size();
+        for(int d = 1; d < 19; d++)//for all the studetns in my array list roster
         {
           count = 0;
           for(Senior student:roster){
@@ -67,9 +69,9 @@ public class Seminars
               //System.out.println("Adventure");
               count+=5;
             }
-            
+            int point = sessions[roster.get(d).getFirstChoice()] += 5;
           }
-          System.out.println(d + ": " + count);
+          System.out.println(d +  ": " +  count);
         }
         System.out.print("\n");
 

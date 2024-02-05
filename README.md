@@ -25,3 +25,6 @@ I have made some changes to the plan, and with you help, I learned to parse cert
 
 Log entry#7(02/01/2024)
 I have learned to parse and specifically select the aspects of the raw data I want, now I have to add my points system in some way, but I think I have an idea.
+
+Log entry #8(02/05/2024)
+The weekend update, is that I have been able to use the work we did together after school, and use that to make a lot more getter methods and then used those getter methods to make a bunch of for loops that willl iterate through each of the seniors first choice preferences and then add five points to that to determine their popularity. I struggled finding the sum, because I was using the for loop. MY master schedule kind of relied on it. 

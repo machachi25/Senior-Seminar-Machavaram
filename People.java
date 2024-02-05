@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class People 
+public class People // unused class
 {
    private String firstName;
    private String lastName;

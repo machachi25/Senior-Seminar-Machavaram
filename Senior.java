@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+// us
 public class Senior
 {
     //private String nombrePrimero;
@@ -17,7 +17,7 @@ public class Senior
     ArrayList<Senior> seniorsChoices = new ArrayList<Senior>();
     String[][] stuData = new String[80][25];
     
-    public Senior(String senID, String nombre, String firstChoice, String secondChoice, String thirdChoice, String fourthChoice, String fifthChoice) //
+    public Senior(String senID, String nombre, String firstChoice, String secondChoice, String thirdChoice, String fourthChoice, String fifthChoice) //constructor
     {
       this.senID = senID;
       this.nombre = nombre;
@@ -28,7 +28,7 @@ public class Senior
       this.fifthChoice =  Integer.parseInt(fifthChoice);
     }
 
-    public void graduates()
+    public void graduates()// creation for objects of seniors
     {
       try {
       File myObj = new File("Kids.txt");
@@ -50,7 +50,7 @@ public class Senior
     }
   }
 
-    public int getFirstChoice()
+    public int getFirstChoice() //getter methods
     {
      return firstChoice;
     }

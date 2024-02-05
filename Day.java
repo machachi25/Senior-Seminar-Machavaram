@@ -11,18 +11,7 @@ public class Day
 
     public void Schedule()
     {
-    try {
-        File myObj = new File("SrSeminar_RawData (2).csv");
-        Scanner myReader = new Scanner(myObj);
-        while (myReader.hasNextLine()) {
-          String data = myReader.nextLine();
-          System.out.println(data + "\t");
-        }
-        myReader.close();
-      } catch (FileNotFoundException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
-      }
+      int[][] master = new int[5][5];
     }
 
     

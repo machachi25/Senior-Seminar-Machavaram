@@ -55,11 +55,29 @@ public class Senior
      return firstChoice;
     }
 
-  public void setName(String initNombre) //
-  {
-    nombre = initNombre;
-  }
+    public void setName(String initNombre) //
+    {
+      nombre = initNombre;
+    }
+    public int getSecondChoice()
+    {
+      return secondChoice;
+    }
 
+    public int getThirdChoice()
+    {
+      return thirdChoice;
+    }
+
+    public int getFourthChoice()
+    {
+      return fourthChoice;
+    }
+
+    public int getFifthChoice()
+    {
+      return fifthChoice;
+    }
 }
 
 

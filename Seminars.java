@@ -5,10 +5,10 @@ import java.util.*;
 
 public class Seminars
 {
-    String[][] stuChoices = new String[100][25];
-    ArrayList <Senior> roster = new ArrayList<>(); 
+    String[][] stuChoices = new String[100][25]; //2D array of the raw data
+    ArrayList <Senior> roster = new ArrayList<>(); //array list of all the seniors
     int i = 0; //counter for rows 
-    public void splitter()
+    public void splitter() //method will be used for the parsing and splitting the raw data into the sexitons i want
     {
         try {
             File myObj = new File("SrSeminar_RawData.csv");
@@ -18,7 +18,7 @@ public class Seminars
               stuChoices[i] =  data.split(",");
               System.out.println(stuChoices[i][2] + stuChoices[i][3] +stuChoices[i][10] +  " " +  stuChoices[i][11] + " " +  stuChoices[i][12] +  " " +  stuChoices[i][13] +  " " +  stuChoices[i][14]);
               //create student obj
-              Senior s1 = new Senior(stuChoices[i][2], stuChoices[i][3],  (stuChoices[i][10]), (stuChoices[i][11]), (stuChoices[i][12]),  (stuChoices[i][13]), (stuChoices[i][14]));
+              Senior s1 = new Senior(stuChoices[i][2], stuChoices[i][3],  (stuChoices[i][10]), (stuChoices[i][11]), (stuChoices[i][12]),  (stuChoices[i][13]), (stuChoices[i][14]));//senior object
               roster.add(s1);
                 
               i++;
@@ -35,7 +35,7 @@ public class Seminars
 
     }
     
-    /*public String toString()
+    /*public String toString() unused method/ first trial for the original idea that changed
           {
            String name =  stuChoices[i][3];
            String primary =  stuChoices[i][10];
@@ -46,16 +46,116 @@ public class Seminars
            return name + " chose the seminar ids of " + primary + ", " + secondary + ", " + tertiary + ", " + quaternary + ", " + quinary;
           }*/
 
-      public void popularity()
+      public void popularity() //used to find the semianrs that are most requested
       {
+        int[] sessions = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}; //unused 1D array
+        int first = 5; // were supposed to be point values for the popularity, but i have to figure out how to use them
+        int second = 4;
+        int third = 3;
+        int fourth = 2;
+        int fifth = 1;
         int count = 0; 
-        for(Senior student:roster){
-          if(student.getFirstChoice() == 1)
-          {
-            System.out.println("Adventure");
-            count++;
+        
+        // finds the total number of votes for each semianr ID as peoples first choice
+
+        for(int d = 1; d < 19; d++)//for the 18 different seminars
+        {
+          count = 0;
+          for(Senior student:roster){
+            if(student.getFirstChoice() == d) // d will iterate through the seminars, and if the seminar ID matches the first choice, the count will act as a vote 
+            {
+              //System.out.println("Adventure");
+              count+=5;
+            }
+            
           }
+          System.out.println(d + ": " + count);
         }
-        System.out.println("Number of studetns wanting ADVENTURE AS THEIR FIRST CHOICE: " + count);
+        System.out.print("\n");
+
+        for(int q = 1; q < 19; q++) // same as the first oen but with 2nd choice
+        {
+          count = 0;
+          for(Senior kid:roster)
+          {
+            if(kid.getSecondChoice() == q)
+            {
+              count+=4;
+            }
+          }
+          System.out.println(q + ": " + count);
+        }
+        System.out.println("\n");
+
+
+        for(int a = 1; a < 19; a++) // same as ifrst with 3rd
+        {
+          count = 0;
+          for(Senior person: roster)
+          {
+            if(person.getThirdChoice() == a)
+            {
+              count+=3;
+            }
+          }
+          System.out.println(a + ": " + count);
+        }
+        System.out.println("\n");
+        
+        
+        for(int e = 1; e < 19; e++)//4th column
+        {
+          count = 0;
+          for(Senior senior: roster)
+          {
+            if(senior.getFourthChoice()== e)
+            {
+              count+=2;
+            }
+
+          }
+          System.out.println(e + ": " + count);
+        }
+        System.out.println("\n");
+
+        for(int k = 1; k < 19; k++)//5th choice
+        {
+          count = 0;
+          for(Senior human: roster)
+          {
+            if(human.getFifthChoice() == k)
+            {
+              count++;
+            }
+
+          }
+          System.out.println(k + ": " + count);
+        }
+        
+       
+
+        /*for(int g = 0; g < roster.size(); g++)
+        {
+          sessions[roster.get(g).getFirstChoice()] = first+= 5;
+          
+        }
+        for(int y = 0; y < 100; y++)
+        {
+          sessions[roster.get(y).getSecondChoice()] = second+=4;
+        }
+        for(int q = 0; q < 100; q++)
+        {
+          sessions[roster.get(q).getThirdChoice()] = third+=3;
+        }
+        for(int w = 0; w < 100; w++)
+        {
+          sessions[roster.get(w).getFourthChoice()] = fourth+=2;
+        }
+        for(int z = 0; z < 100; z++)
+        {
+          sessions[roster.get(z).getFifthChoice()] = fifth+=1;
+        }*/
+        
+
       }    
 }

@@ -60,7 +60,16 @@ public class Seminars
         
         // finds the total number of votes for each semianr ID as peoples first choice
         int lenRos = roster.size();
-        for(int d = 1; d < 19; d++)//for all the studetns in my array list roster
+           for(int i = 1; i < lenRos; i++)
+        { 
+          sem[roster.get(i).getFirstChoice()] += 5;
+          sem[roster.get(i).getSecondChoice()] += 4;
+          sem[roster.get(i).getThirdChoice()] += 3;
+          sem[roster.get(i).getFourthChoice()] += 2;
+          sem[roster.get(i).getFifthChoice()] ++;
+          
+        }
+        /*for(int d = 1; d < 19; d++)//for all the studetns in my array list roster
         {
           count = 0;
           for(Senior student:roster){
@@ -134,7 +143,7 @@ public class Seminars
           System.out.println(k + ": " + count);
         }
         
-       
+       */
 
         /*for(int g = 0; g < roster.size(); g++)
         {
